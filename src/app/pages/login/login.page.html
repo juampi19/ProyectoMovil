@@ -1,0 +1,54 @@
+
+<ion-content class="row1">
+
+  <ion-grid class="grid1">
+    
+    <ion-row class="row1">
+        <ion-col size="12" sizeSm="6">   
+          <div class="Display-flex row" >
+          
+              <img class="img-a " src="https://duoc.modyocdn.com/uploads/d1065e11-cde5-40b4-b58f-59004919c757/original/logo_duoc.svg" alt="">
+          </div>
+        </ion-col>
+
+        <ion-col size="12" sizeSm="6">
+          <form #formulario="ngForm" (ngSubmit)="onSubmit()" class="contaier-login">
+
+            <h1>Iniciar Sesión</h1>
+        
+            <ion-item>
+              <ion-icon name="person" class="icon-login"></ion-icon>
+              <ion-input  type="email" 
+                        placeholder="Email"
+                        name="email"
+                        [(ngModel)]="usuario.email"
+                        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" 
+                        required=""></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <ion-input type="password"
+                        name="password"
+                        [(ngModel)]="usuario.password"
+                        required="" 
+                        placeholder="Contraseña"
+                        minlength="4"></ion-input>
+            </ion-item>
+        
+            <ion-button
+            [disabled]="formulario.invalid" 
+            type="submit" expand="block">
+              Entrar
+            </ion-button>
+        
+          </form>
+        </ion-col>
+    </ion-row>
+
+
+</ion-grid>
+
+ 
+
+</ion-content>
