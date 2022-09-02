@@ -1,0 +1,7 @@
+{
+  "name": "duocQr",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
