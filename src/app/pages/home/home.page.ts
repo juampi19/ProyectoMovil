@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { ToastController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -12,11 +12,17 @@ export class HomePage implements OnInit {
   routerState: any;
   user: string;
 
-  constructor(private router: Router, private activeroute: ActivatedRoute, public toasCtrl: ToastController  ) {
-    this.activeroute.queryParams.subscribe(
+
+  constructor( private router: Router,
+               private activeroute: ActivatedRoute,
+               public toasCtrl: ToastController,
+               private menu: MenuController  ) {
+
+      this.activeroute.queryParams.subscribe(
       params => {
         if(this.router.getCurrentNavigation().extras.state){
           this.routerState = this.router.getCurrentNavigation().extras.state;
+          this.user = this.routerState.email.split('@')[0];
           localStorage.setItem('user', this.routerState.email.split('@')[0]);
         }
       }
@@ -24,7 +30,8 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit(){
-    this.user = localStorage.getItem('user');
+    // this.user = localStorage.getItem('user');
+    this.menu.enable( true, 'first' );
   }
 
   clear() {
@@ -38,5 +45,6 @@ export class HomePage implements OnInit {
     });
     toast.present();
   }
+
 
 }

@@ -1,13 +1,108 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
   
-  <h2>Bienvenido: <span>{{ user }}</span></h2>
+  <div class="main-content">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button menu="first" color="primary"></ion-menu-button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+
+    <div class="user-profile">
+
+      <div class="user-data">
+        <h3 class="user-name">Bienvenido</h3>
+        <h3 class="user-name">{{ user }}</h3>
+      </div>
+
+      <ion-buttons slot="end">
+        <ion-avatar>
+            <img src="/assets/user-icon.jpg" />
+        </ion-avatar>
+
+    </ion-buttons>
+    </div><!--div perfil-->
+
+    <div class="content-div">
+
+      <div class="buttons-div">
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="6">
+
+              <mat-card>
+                <mat-card-actions>
+                  <img src="../../../assets/qr.png" alt="qr foto">
+                  <button mat-button>Escanear Codigo</button>
+                </mat-card-actions>
+              </mat-card>
+
+            </ion-col>
+
+            <ion-col size="6">
+
+              <mat-card>
+                <mat-card-actions>
+                  <img src="../../../assets/Background.png" alt="qr foto">
+                  <button mat-button>Horario</button>
+                </mat-card-actions>
+              </mat-card>
+
+            </ion-col>
+
+            <ion-col size="6">
+
+              <mat-card>
+                <mat-card-actions>
+                  <img src="../../../assets/Background.png" alt="qr foto">
+                  <button mat-button>Horario</button>
+                </mat-card-actions>
+              </mat-card>
+
+            </ion-col>
+
+            <ion-col size="6">
+
+              <mat-card>
+                <mat-card-actions>
+                  <img src="../../../assets/Background.png" alt="qr foto">
+                  <button mat-button>Horario</button>
+                </mat-card-actions>
+              </mat-card>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid> 
+      </div>
+
+    </div><!--content info-->
+
+  </div>
+
+  <ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+  
+      <ion-tab-button tab="account">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Account</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="contact">
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-label>Contacts</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="settings">
+        <ion-icon name="settings-outline"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-tab-button>
+  
+  
+    </ion-tab-bar>
+  
+  
+  </ion-tabs>
 
 </ion-content>

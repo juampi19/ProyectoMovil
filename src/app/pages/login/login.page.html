@@ -17,7 +17,7 @@
             <h1>Iniciar Sesión</h1>
         
             <ion-item>
-              <ion-icon name="person" class="icon-login"></ion-icon>
+              <ion-icon name="at-outline" class="icon-login"></ion-icon>
               <ion-input  type="email" 
                         placeholder="Email"
                         name="email"
@@ -33,13 +33,18 @@
                         [(ngModel)]="usuario.password"
                         required="" 
                         placeholder="Contraseña"
-                        minlength="4"></ion-input>
+                        minlength="6"></ion-input>
             </ion-item>
         
             <ion-button
             [disabled]="formulario.invalid" 
             type="submit" expand="block">
               Entrar
+            </ion-button>
+            
+
+            <ion-button  expand="block" fill="clear" shape="round">
+              Recuperar password
             </ion-button>
         
           </form>
