@@ -17,6 +17,7 @@ export class LoginPage implements OnInit {
   constructor( private router: Router, private menu: MenuController, private alertaCrtl: AlertController ) { }
 
   ngOnInit() {
+    this.menu.enable( false, 'first' )
   }
 
   async presentAlert() {
