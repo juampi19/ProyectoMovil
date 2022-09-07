@@ -22,7 +22,6 @@ export class HomePage implements OnInit {
       params => {
         if(this.router.getCurrentNavigation().extras.state){
           this.routerState = this.router.getCurrentNavigation().extras.state;
-          this.user = this.routerState.email.split('@')[0];
           localStorage.setItem('user', this.routerState.email.split('@')[0]);
         }
       }
@@ -30,7 +29,7 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit(){
-    // this.user = localStorage.getItem('user');
+    this.user = localStorage.getItem('user');
     this.menu.enable( true, 'first' );
   }
 

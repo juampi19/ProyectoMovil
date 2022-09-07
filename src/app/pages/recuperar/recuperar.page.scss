@@ -1,0 +1,75 @@
+.grid1 {
+    height: 100%;
+    padding: 0px;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+
+.b{
+    width: 100%;
+}
+
+.contaier-login {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 55px 10px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+
+.row1 {
+    height: 100%;
+    background: -moz-linear-gradient(45deg, rgba(61, 66, 150, 1) 0%, rgba(25, 0, 255, 0.8) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(61, 66, 150, 1) 0%, rgba(247, 247, 247, 0.8) 100%);
+    background: linear-gradient(45deg, rgb(21, 23, 66) 0%, rgba(84, 74, 171, 0.8) 100%);
+}
+
+.row2 {
+    height: 0%;
+}
+
+ion-icon {
+    margin-right: 15px;
+}
+
+ion-button {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+ion-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    top: 0px !important;
+}
+
+
+ion-item {
+    margin-bottom: 10px;
+    
+    
+}
+
+input {
+    background-color: #FFFFFF !important;
+}
+
+.imagen {
+    padding: 30px;
+}
+
+.img-a {
+    max-width: 100%;
+    margin: 0 15%;
+}

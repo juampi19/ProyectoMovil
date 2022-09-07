@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { AlertController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -14,12 +14,27 @@ export class LoginPage implements OnInit {
     password: '',
   };
 
-  constructor( private router: Router, private menu: MenuController ) { }
+  constructor( private router: Router, private menu: MenuController, private alertaCrtl: AlertController ) { }
 
   ngOnInit() {
   }
 
+  async presentAlert() {
+    const alert = await this.alertaCrtl.create({
+      backdropDismiss: false,
+      header: 'Datos Incorrectos',
+      message: 'Ingrese nuevamente usuario y contraseña',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+
   onSubmit() {
+    if( this.usuario.email !== 'prueba@correo.com' ) {
+      this.presentAlert();
+      return;
+    }
     const navegationExtras: NavigationExtras = {
       state: this.usuario
     };

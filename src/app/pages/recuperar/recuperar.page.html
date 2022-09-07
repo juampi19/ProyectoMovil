@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="row1">
+
+    <div class="imagen">
+      <img src="../../../assets/logo.png" alt="imagen logo" class="img-a">
+    </div>
+    
+
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12">
+          
+          <form #formulario="ngForm" (ngSubmit)="onSubmit()" class="contaier-login">
+
+            <h1>recupera tu password</h1>
+        
+            <ion-item>
+              <ion-icon name="at-outline" class="icon-login"></ion-icon>
+              <ion-input  type="email" 
+                        placeholder="Ingresar Email"
+                        name="email"
+                        [(ngModel)]="usuario.email"
+                        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" 
+                        required=""></ion-input>
+            </ion-item>
+        
+        
+            <ion-button
+            [disabled]="formulario.invalid" 
+            type="submit" expand="block">
+              Recuperar Contraseña
+            </ion-button>
+            
+        
+          </form>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+</ion-content>

@@ -4,24 +4,18 @@
   <div class="main-content">
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-menu-button menu="first" color="primary"></ion-menu-button>
+        <ion-menu-button menu="first" color="warning"></ion-menu-button>
       </ion-buttons>
   
     </ion-toolbar>
 
     <div class="user-profile">
+      <img class="logo" src="../../../assets/logo.png" alt="Imagen logo">
 
       <div class="user-data">
-        <h3 class="user-name">Bienvenido</h3>
+        <h3 class="user-name animate__bounce">Bienvenido</h3>
         <h3 class="user-name">{{ user }}</h3>
       </div>
-
-      <ion-buttons slot="end">
-        <ion-avatar>
-            <img src="/assets/user-icon.jpg" />
-        </ion-avatar>
-
-    </ion-buttons>
     </div><!--div perfil-->
 
     <div class="content-div">
@@ -34,7 +28,7 @@
               <mat-card>
                 <mat-card-actions>
                   <img src="../../../assets/qr.png" alt="qr foto">
-                  <button mat-button>Escanear Codigo</button>
+                  <button mat-button>Escanear</button>
                 </mat-card-actions>
               </mat-card>
 
@@ -52,22 +46,21 @@
             </ion-col>
 
             <ion-col size="6">
-
-              <mat-card>
-                <mat-card-actions>
-                  <img src="../../../assets/Background.png" alt="qr foto">
-                  <button mat-button>Horario</button>
-                </mat-card-actions>
-              </mat-card>
-
+                <mat-card >
+                  <mat-card-actions >
+                    <img src="../../../assets/ayuda.png" alt="qr foto">
+                    <button mat-button>ayuda</button>
+                  </mat-card-actions>
+                </mat-card>
+              
             </ion-col>
 
             <ion-col size="6">
 
               <mat-card>
                 <mat-card-actions>
-                  <img src="../../../assets/Background.png" alt="qr foto">
-                  <button mat-button>Horario</button>
+                  <img src="../../../assets/historialpng.png" alt="qr foto">
+                  <button mat-button>Historial</button>
                 </mat-card-actions>
               </mat-card>
 
@@ -86,17 +79,13 @@
   
       <ion-tab-button tab="account">
         <ion-icon name="person-outline"></ion-icon>
-        <ion-label>Account</ion-label>
+        <ion-label>Perfil</ion-label>
       </ion-tab-button>
   
-      <ion-tab-button tab="contact">
-        <ion-icon name="call-outline"></ion-icon>
-        <ion-label>Contacts</ion-label>
-      </ion-tab-button>
   
       <ion-tab-button tab="settings">
         <ion-icon name="settings-outline"></ion-icon>
-        <ion-label>Settings</ion-label>
+        <ion-label>Ajustes</ion-label>
       </ion-tab-button>
   
   
