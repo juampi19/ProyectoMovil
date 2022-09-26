@@ -32,6 +32,11 @@ export class AppComponent {
       nombre: 'Cerrar Sesión',
       icono: 'close-outline',
       redirect: '/login'
+    },
+    {
+      nombre: 'SQL',
+      icono: 'close-outline',
+      redirect: '/sql-lite'
     }
   ];
 
