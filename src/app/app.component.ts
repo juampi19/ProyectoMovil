@@ -32,6 +32,11 @@ export class AppComponent {
       nombre: 'Cerrar Sesión',
       icono: 'close-outline',
       redirect: '/login'
+    },
+    {
+      nombre: 'Admin',
+      icono: 'close-outline',
+      redirect: '/admin'
     }
   ];
 
