@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { SQLiteObject } from '@ionic-native/sqlite';
-import { SQLite } from '@ionic-native/sqlite/ngx';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +8,6 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
 export class DbService {
 
   constructor( private router: Router) {
-    
   }
 
   canActivate() {

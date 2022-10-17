@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import { ToastController, MenuController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-home',
@@ -10,26 +11,29 @@ import { ToastController, MenuController } from '@ionic/angular';
 export class HomePage implements OnInit {
 
   routerState: any;
-  user: string;
+  user: any;
 
 
   constructor( private router: Router,
                private activeroute: ActivatedRoute,
                public toasCtrl: ToastController,
-               private menu: MenuController  ) {
+               private menu: MenuController, private storage: Storage  ) {
 
-      this.activeroute.queryParams.subscribe(
-      params => {
-        if(this.router.getCurrentNavigation().extras.state){
-          this.routerState = this.router.getCurrentNavigation().extras.state;
-          localStorage.setItem('user', this.routerState.email.split('@')[0]);
-        }
-      }
-    );
+                this.storage.create();
+
+                this.activeroute.queryParams.subscribe(
+                params => {
+                  if(this.router.getCurrentNavigation().extras.state){
+                    this.routerState = this.router.getCurrentNavigation().extras.state;
+                  }
+                }
+              );
   }
 
   ngOnInit(){
-    this.user = localStorage.getItem('user');
+    this.storage.get('user').then( resp => {
+        this.user =  resp.split('@')[0];
+    } );
     this.menu.enable( true, 'first' );
   }
 
