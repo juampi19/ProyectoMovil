@@ -4,15 +4,24 @@
 }
 
 img {
-    width: 120px;
+    width: 100px;
 }
 
-.pick-avatar {
-    width: 80px;
-    opacity: 0.3;
+ion-title {
+    text-align: center;
 }
 
-.pick-avatar-seleccionado {
-    transition: opacity 0.5s linear;
-    opacity: 1 !important;
+.img-a {
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.main-content {
+    max-width: 96%;
+    background-color: #fff;
+}
+
+.main {
+    height: 100%;
+    background-color: rgba(84, 74, 171, 0.8);
 }

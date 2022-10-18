@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { DbService } from './services/db.service';
+import { UsuarioGuard } from './guards/usuario.guard';
+
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
     path: 'admin',
     redirectTo: 'admin',
     pathMatch: 'full'
+  },{
+    path: 'perfil',
+    redirectTo: 'perfil',
+    pathMatch: 'full'
   },
   {
     path: '**',
@@ -42,7 +47,8 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
-    // canActivate: [ DbService ]
+    // canActivate: [ UsuarioGuard ]
+    canLoad: [ UsuarioGuard ]
   },
   {
     path: 'login',
@@ -64,6 +70,11 @@ const routes: Routes = [
     path: 'e404',
     loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+
 
 
 

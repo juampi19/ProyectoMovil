@@ -193,7 +193,7 @@ export class AyudaPage implements OnInit {
   }
 
   onClick() {
-    this.navCtrl.navigateBack('/login');
+    this.navCtrl.navigateBack('/home');
   }
 
 }
