@@ -18,7 +18,7 @@
   <ion-row class="top-20">
     
     <ion-col size="12" class="ion-text-center">
-      <img src="assets/avatars/av-8.png" class="img-avatar">
+      <img src="assets/avatars/{{ usuario.avatar }}" class="img-avatar">
     </ion-col>
 
   </ion-row>
@@ -32,9 +32,10 @@
   </ion-row>
 
 
-  <app-avatar-selector></app-avatar-selector>
+  <app-avatar-selector (avatarSelec)="usuario.avatar = $event"
+  [avatarActualr]="usuario.avatar"></app-avatar-selector>
 
-  <form>
+  <form (ngSubmit)="actualizar( fActualizar )" #fActualizar="ngForm">
       <ion-row>
         <ion-col>
           

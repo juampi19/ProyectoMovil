@@ -14,7 +14,7 @@
 
       <div class="user-data">
         <h3 class="user-name animate__bounce">Bienvenido</h3>
-        <h3 class="user-name">{{ user }}</h3>
+        <h3 class="user-name">{{ usuario.nombre }}</h3>
       </div>
     </div><!--div perfil-->
 
@@ -28,7 +28,9 @@
               <mat-card>
                 <mat-card-actions>
                   <img src="../../../assets/qr.png" alt="qr foto">
-                  <button mat-button>Escanear</button>
+                  <ion-button (click)="mostrarCamara()" fill="clear">
+                    Escanear
+                  </ion-button>
                 </mat-card-actions>
               </mat-card>
 

@@ -122,4 +122,30 @@ export class UsuarioService {
 
   }
 
+
+  actualizarUsuario( usuario: Usuario ) {
+
+    const headers = new HttpHeaders({
+      'x-token': this.token
+    });
+
+    return new Promise( resolve => {
+
+      this.http.post( `${ URL }/user/update`, usuario, { headers } ).subscribe( resp => {
+        // eslint-disable-next-line @typescript-eslint/dot-notation
+        if( resp['ok'] ) {
+
+          // eslint-disable-next-line @typescript-eslint/dot-notation
+          this.guardarToken( resp['token'] );
+          resolve(true);
+        }else {
+          resolve(false);
+        }
+    } );
+
+
+    } );
+
+  }
+
 }
